@@ -4,6 +4,10 @@ A simple CRUD example of using AngularJS with SailsJS. It uses Angular Resource 
 and also includes some socket.io interaction on the front-end. There is some basic authentication and also 
 a few nifty directives for loading gravatars via email address and form password validation. Enjoy!
 
+
+
+Currently updating with the procedure at -> https://github.com/balderdashy/sails-wiki/blob/0.9/Migration-Guide.md
+
 Install
 ------------------
 
