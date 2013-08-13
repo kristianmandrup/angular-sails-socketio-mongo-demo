@@ -25,6 +25,7 @@ results
 
 npm-debug.log
 node_modules/
+www/
 
 ########################
 # misc / editors
