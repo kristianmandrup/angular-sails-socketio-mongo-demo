@@ -1,5 +1,5 @@
 module.exports = {
-	views: {
-    engine: 'ejs'
+	"views": {
+    "engine": "ejs"
   }
 };
