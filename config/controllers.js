@@ -14,8 +14,6 @@
  */
 
 module.exports.controllers = {
-
-
   blueprints: {
 
     // Optional mount path prefix for blueprints
@@ -23,12 +21,10 @@ module.exports.controllers = {
     // e.g. '/api/v2'
     prefix: '',
 
-
     // Whether routes are automatically generated for every action in your controllers
     // (also maps `index` to /:controller)
     // '/:controller', '/:controller/index', and '/:controller/:action'
     actions: true,
-
 
     // ** NOTE **
     // These CRUD shortcuts exist for your convenience during development,
@@ -39,7 +35,6 @@ module.exports.controllers = {
     // '/:controller/destroy/:id'
     shortcuts: true,
 
-
     // Automatic REST blueprints enabled?
     // e.g.
     // 'get /:controller/:id?'
@@ -47,7 +42,6 @@ module.exports.controllers = {
     // 'put /:controller/:id'
     // 'delete /:controller/:id'
     rest: true,
-
 
     // If a blueprint route catches a request,
     // only match :id param if it's an integer
@@ -58,5 +52,4 @@ module.exports.controllers = {
     //		get /user/a8j4g9jsd9ga4ghjasdha
     expectIntegerId: false
   }
-
 };

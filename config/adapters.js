@@ -19,10 +19,5 @@ module.exports.adapters = {
   // (data IS preserved when the server shuts down)
   disk: {
     module: 'sails-disk'
-  },
-
-  mongo: {
-    module   : 'sails-mongo',
-    url      : 'mongodb://localhost:27017/YOUR_DB_NAME'
   }
 };
