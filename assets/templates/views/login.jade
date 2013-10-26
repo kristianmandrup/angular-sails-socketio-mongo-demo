@@ -1,0 +1,31 @@
+script(type="text/ng-template" id="views/login.html")
+  h1 Sign In
+  form#login-form.css-form ng-submit="login()" name="loginForm" novalidate)
+    fieldset
+      legend User Information
+      .alert.alert-error(data-ng-show="showMessage(message)")
+        button.close(type="button" data-dismiss="alert")
+          &times; {{message}}
+
+      .control-group
+        label.control-label(for="inputEmail")
+          span.required" * 
+          Email Address
+        div(class="controls")
+          input(type="email" ng-model="user.email" required autofocus)
+          span.error ng-show="myForm.list.$error.REQUIRED") 
+            Required!
+      .control-group
+        label.control-label(for="inputPassword")
+          span.required * 
+          Password
+        .controls
+          input(type="password" ng-model="user.password" required)
+      .control-group
+        .controls
+          label.checkbox
+            input(type="checkbox") 
+              Remember me
+          .form-actions
+            button.btn.btn-inverse(type="submit" ng-disabled="loginForm.$invalid") 
+              Sign In

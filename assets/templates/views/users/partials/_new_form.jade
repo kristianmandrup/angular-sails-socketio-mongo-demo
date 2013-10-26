@@ -1,0 +1,9 @@
+script(type="text/ng-template" id="views/users/partials/_new_form.html")
+  div(data-ng-controller="UsersController">)
+    form#new-user-form.css-form(ng-submit="addUser()" name="newUserForm" novalidate)
+      fieldset(data-ng-include data-src="'views/users/partials/_user_info_controls.html'")
+        .control-group
+          .controls
+            .form-actions
+              button.btn.btn-inverse(type="submit" ng-disabled="newUserForm.$invalid") 
+                Create User

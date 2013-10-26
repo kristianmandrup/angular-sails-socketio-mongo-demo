@@ -1,0 +1,35 @@
+legend User Information
+span.error(ng-show="myForm.list.$error.REQUIRED") Required!
+div(ng-show="form.uEmail.$dirty && form.uEmail.$invalid") Invalid
+  span(ng-show="form.uEmail.$error.required) Tell us your email.
+  span(ng-show="form.uEmail.$error.email") This is not a valid email.
+.control-group
+  label.control-label(for="name")
+    span.required * 
+    Name:
+  .controls
+    input#name(type="text" data-ng-model="inputData.name" placeholder="Full Name" required)
+
+.control-group
+  label.control-label(for="email")
+    span.required *
+    Email Address:
+  .controls
+    input(type="email" data-ng-model="inputData.email" placeholder="Email Address" required)
+    .input-help
+      h4 This is not a valid email address.
+.control-group
+  label.control-label(for="password")
+    span.required *
+    Password:
+  .controls
+    input#Password.immediate-help(type="password" data-ng-model="inputData.password" password-validate required)
+    .input-help
+      h4 Password must meet the following requirements:
+      ul
+        li(ng-class="pwdHasLetter") At least
+          strong one letter
+        li(ng-class="pwdHasNumber") At least
+          strong one number
+        li(ng-class="pwdValidLength") At least
+          strong 8 characters long

@@ -1,0 +1,9 @@
+script(type="text/ng-template" id="views/users/partials/_edit_form.html")
+  div(data-ng-controller="UsersController">)
+    form#edit-user-form.css-form(ng-submit="updateUser()" name="editUserForm" novalidate)
+      fieldset(data-ng-include data-src="'views/users/partials/_user_info_controls.html'")
+        .control-group
+          .controls
+            .form-actions
+              button.btn.btn-inverse(type="submit" ng-disabled="editUserForm.$invalid") 
+                Update User

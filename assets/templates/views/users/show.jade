@@ -1,0 +1,17 @@
+script(type="text/ng-template" id="views/users/show.html")
+  .users.show view
+    h1 User
+    div(data-ng-controller="UsersController")
+      fieldset
+        legend User Information
+        p
+          strong Id
+          {{user.id}}
+        p
+          strong Name
+          {{user.name}}
+        p
+          strong Email
+          {{user.email}}
+        a.btn.btn-info(ng-href="#/users/edit/{{user.id}}") Edit
+        a.btn.btn-primary(ng-href="#/users") Back

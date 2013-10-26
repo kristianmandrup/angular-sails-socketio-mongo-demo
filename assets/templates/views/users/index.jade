@@ -1,0 +1,33 @@
+script(type="text/ng-template" id="views/users/index.html")
+  .users.view
+    h1 Users
+    div(data-ng-controller="UsersController")
+      fieldset
+        legend Total Users: 
+          = users.length }}
+        table.table.table-hover.table-striped.table-bordered.usersTable
+          thead
+            tr
+              th(data-ng-click="setOrder('id')") ID
+              th(data-ng-click="setOrder('name')") Name
+              th(data-ng-click="setOrder('email')") Email
+              th(colspan="3" style="text-align: center;") Actions
+              th
+            tbody
+              tr.error(data-ng-hide="users && users.length > 0")
+                td(colspan="6")
+                  .text-center
+                    strong No users found
+              tr(data-ng-repeat="user in users | orderBy:orderby:reverse")
+                td = user.id
+                td = user.name
+                td = user.email
+
+                td.txt_center
+                  a .btn.btn-inverse(ng-href="#/users/show/{{user.id}}") Show
+                td.txt_center
+                  a.btn.btn-info ng-href(#/users/edit/{{user.id}}") Edit
+                td.txt_center
+                  button.btn.btn-danger(data-ng-click="deleteUser(user)") X
+
+        a .btn.btn-primary(ng-href="#/users/new") New User
